@@ -47,5 +47,8 @@
 	"prettier": {
 		"printWidth": 120,
 		"useTabs": true
+	},
+	"engines": {
+		"node": ">=7.6"
 	}
 }

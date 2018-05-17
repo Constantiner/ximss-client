@@ -1,7 +1,7 @@
 import { startXimssSession } from "../src/ximss-client";
 
 describe("Starting a new session", () => {
-	it("should return a Promise", () => {
+	it("should return a Promise", async () => {
 		const userName = "constantiner",
 			password = "test",
 			serverName = "example.com",
@@ -19,6 +19,7 @@ describe("Starting a new session", () => {
 				secureMode
 			};
 		expect.assertions(1);
-		return startXimssSession(loginData).then(data => expect(data).toEqual(loginData));
+		const data = await startXimssSession(loginData);
+		expect(data).toEqual(loginData);
 	});
 });
