@@ -1,0 +1,52 @@
+{
+	"name": "ximss-client",
+	"version": "0.1.0",
+	"description": "Base library for communicating with CommuniGate Pro 6.2 server with XIMSS protocol written in JavaScript",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint '**/*.js'",
+		"build": "gulp",
+		"format": "prettier 'src/*.js' --write"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Constantiner/ximss-client.git"
+	},
+	"keywords": [
+		"XIMSS",
+		"JavaScript",
+		"CommuniGate Pro"
+	],
+	"author": "Konstantin Kovalev <constantiner@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Constantiner/ximss-client/issues"
+	},
+	"homepage": "https://github.com/Constantiner/ximss-client#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-preset-import-export": "^1.0.2",
+		"del": "^3.0.0",
+		"eslint": "^4.19.1",
+		"eslint-config-prettier": "^2.9.0",
+		"gulp": "^3.9.1",
+		"jest": "^22.4.3",
+		"prettier": "^1.12.1"
+	},
+	"jest": {
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/dist/"
+		],
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/*"
+		]
+	},
+	"prettier": {
+		"printWidth": 120,
+		"useTabs": true
+	}
+}
