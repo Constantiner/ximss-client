@@ -40,8 +40,12 @@ const fetcher = (requestParams = {}, requestHeaders = {}) => (
 	method,
 	contentType = "text/xml; charset=utf-8"
 ) => url => async body => {
-	const response = await fetch(
-		compose(formRequest(url), formRequestParams)(method, contentType, body, requestParams, requestHeaders)
+	const response = await compose(fetch, formRequest(url), formRequestParams)(
+		method,
+		contentType,
+		body,
+		requestParams,
+		requestHeaders
 	);
 	if (!response.ok) {
 		throw handleBadResponse(response);
