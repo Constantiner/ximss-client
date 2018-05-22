@@ -10,7 +10,8 @@
 		"jest": true
 	},
 	"rules": {
-		"semi": ["error", "always"]
+		"semi": ["error", "always"],
+		"no-console": "off"
 	},
 	"extends": ["eslint:recommended", "prettier"]
 }
