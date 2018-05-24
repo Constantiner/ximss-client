@@ -18,7 +18,7 @@ const sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("clean", () => del(["dist"]));
 
-const getSourceFile = () => gulp.src("src/ximss-client.js"),
+const getSourceFile = () => gulp.src("src/**/*.js"),
 	getBanner = () => header(banner, { pkg }),
 	getDest = () => gulp.dest("./dist/");
 
